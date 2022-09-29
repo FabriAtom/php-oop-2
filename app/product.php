@@ -16,11 +16,9 @@ class Product {
         $this-> weight = $param['weight'];
         $this-> brand = $param['brand'];
     }
-    public function setPrice($price) { 
-    }
-}
+};
 
-class Shop {
+class Cart {
     public $name;
     public $email;
     public $productNumber;
@@ -36,9 +34,9 @@ class Shop {
     function setTotalPrice($products){
         $this->TotalPrice = 0;
         foreach($products as $product){
-          $this -> $TotalPrice += $products -> Price;  
+          $this->TotalPrice += $product->price;  
         }
-        return$this->TotalPrice;
+        return $this->TotalPrice;
     }
 };
 
